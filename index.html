@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title icon -->
+    <link rel="icon" type="image/png" href="images/battery.png" />
+    <title>Motivau</title>
+    <!-- tailwind CSS link -->
+    <link href="/dist/styles.css" rel="stylesheet" />
+  </head>
+
+  <body class="bg-slate-100 dark:bg-slate-900">
+    <!-- nav logo -->
+    <nav>
+      <img class="w-48 mx-auto mt-4" src="images/motivaulogo.png" alt="" />
+    </nav>
+    <main class="container mx-auto">
+      <!-- google translate options -->
+    <div class="flex justify-end mr-10" id="google_translate_element"></div>
+    <div class=" flex justify-center items-center mt-36">
+      <div class="w-[600px] shadow-md p-6 rounded-xl bg-white dark:bg-slate-700 dark:text-white">
+        <div class="flex justify-end">
+        <img class="sun cursor-pointer h-7 w-7" src="images/sun.svg" alt="" />
+        <img class="moon cursor-pointer h-7 w-7" src="images/moon.svg" alt=""/>
+        </div>
+        <!-- quote container -->
+        <p class="text-md text-center mb-4" id="quote-container"></p>
+      </div>
+    </div>
+    <!-- Load New quote button -->
+    <div class="flex items-center justify-center mt-5 ">
+      <button
+        onclick="loadQuote()"
+        class="bg-gray-900 text-white py-2 px-4 rounded-full font-bold dark:bg-white dark:text-slate-800">
+        New Quote
+      </button>
+    </div>
+
+    </main>
+    <!-- dark/light mode -->
+    <script src="./apps.js"></script>
+    <!-- quote generation -->
+    <script src="./quote.js"></script>
+    <!-- Google translation -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </body>
+</html>
