@@ -4,7 +4,7 @@ const loadQuote=()=>{
     .then(data=>displayQuote(data.quote))
 }
 const displayQuote=(quote)=>{
-    console.log(quote)
+    // console.log(quote)
     const quoteContainer=document.getElementById('quote-container');
     quoteContainer.innerText=`'${quote}'`
 }
